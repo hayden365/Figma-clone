@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
+
 import LiveCursors from "./cursor/LiveCursors";
 import {
   useBroadcastEvent,
@@ -151,7 +152,7 @@ const Live = ({ canvasRef }: Props) => {
 
   return (
     <div
-      id="canvas"
+      id='canvas'
       onPointerMove={handlePointerMove}
       onPointerLeave={handlePointerLeave}
       onPointerDown={handlePointerDown}
@@ -159,6 +160,7 @@ const Live = ({ canvasRef }: Props) => {
       className='flex h-[100vh] w-full items-center justify-center text-center'
     >
       <canvas ref={canvasRef} />
+
       {reactions.map((r) => (
         <FlyingReaction
           key={r.timestamp.toString()}
